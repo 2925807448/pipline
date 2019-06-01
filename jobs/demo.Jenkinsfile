@@ -1,10 +1,12 @@
 node {
-    agent { 
-            label 'Production' 
-            }
+    
 
     checkout scm
 
+    agent { 
+            label 'Production' 
+            }
+            
     stages {
         stage('Build') {
             steps {
