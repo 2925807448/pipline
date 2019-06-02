@@ -3,7 +3,7 @@ node {
 
     checkout scm
 
-    
+
     stage('Build') {
         echo 'Building....'
     }
@@ -12,6 +12,7 @@ node {
     }
     stage('Deploy') {
         echo 'Deploying....'
+        sh './home/script/deploy.sh'
     }
     post {
         always {
